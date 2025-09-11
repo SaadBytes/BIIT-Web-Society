@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+@import "tailwindcss";
+
+.fontShare {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* goes up */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
