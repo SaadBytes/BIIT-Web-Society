@@ -27,6 +27,7 @@ const Navbar = () => {
 
   return (
     <>
+    <header></header>
       <nav className="w-full px-4 py-5 flex items-center justify-around bg-[#1D0626] border-b border-white relative">
         {/* Logo */}
         <div className="Logo">
@@ -56,6 +57,11 @@ const Navbar = () => {
                 About Us
               </li>
             </a>
+            <a href="#events">
+              <li className="hover:border-b-2 border-white transition-all cursor-pointer">
+                UpComing Events
+              </li>
+            </a>
             <a href="#register">
               <li className="hover:border-b-2 border-white transition-all cursor-pointer">
                 Registeration
@@ -70,7 +76,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden text-white text-3xl cursor-pointer">
+        <div className="md:hidden text-white text-3xl cursor-pointer" aria-label="Toggle navigation">
           {isOpen ? (
             <IoClose onClick={() => setIsOpen(false)} />
           ) : (

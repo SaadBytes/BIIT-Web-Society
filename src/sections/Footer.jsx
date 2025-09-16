@@ -4,7 +4,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer id="footer">
-      <div className="w-full bg-[#110316] text-gray-300 flex flex-col items-center px-6 py-8 md:py-10">
+      <div className="w-full  bg-[#110316] text-gray-300 flex flex-col items-center px-6 py-8 md:py-10">
         {/* Logo / Title */}
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center">
           Biit Web Society

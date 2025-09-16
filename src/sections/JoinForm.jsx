@@ -70,120 +70,120 @@ const ClassRegistrationForm = () => {
   };
 
   // 🔹 Handle submit
-  //   const handleSubmit = async (e) => {
-  //     e.preventDefault();
-  //     const validationErrors = validate();
+    // const handleSubmit = async (e) => {
+    //   e.preventDefault();
+    //   const validationErrors = validate();
 
-  //     if (Object.keys(validationErrors).length > 0) {
-  //       setErrors(validationErrors);
-  //       return;
-  //     }
+    //   if (Object.keys(validationErrors).length > 0) {
+    //     setErrors(validationErrors);
+    //     return;
+    //   }
 
-  //     setErrors({});
+    //   setErrors({});
 
-  //     // try {
-  //     // //   const response = await fetch("https://script.google.com/macros/s/AKfycbz0SXUOGKZQPmlP51DOOb7vq838sX7eYfPYiM-WiciurgnScFe89yy23zgCs72MVDsxRQ/exec", {
-  //     // //     method: "POST",
-  //     // //     headers: {
-  //     // //       "Content-Type": "application/json",
-  //     // //       Authorization: `Bearer kH6MHQLiPHTemMaxtqUjOEkajYkb68smkjBHAtebh6ZgZT8rFM1qATzOVVGkMu2O6DeFaOuDeAHiVosuxr7tTsEwQdcAhI8RTqzTAO8BeOgTGwKqUklSPghEprE6Zzk74Szmtpf6QF7PyjC8CVBWWjVMEYmUlytcrWqID6wyykdeW5XqW7BDSQUMHFMPseTujOSVRgXAHh`, // 🔐 secure token
-  //     // //     },
-  //     // //     body: JSON.stringify(formData),
-  //     // //   });
+    //   // try {
+    //   // //   const response = await fetch("https://script.google.com/macros/s/AKfycbz0SXUOGKZQPmlP51DOOb7vq838sX7eYfPYiM-WiciurgnScFe89yy23zgCs72MVDsxRQ/exec", {
+    //   // //     method: "POST",
+    //   // //     headers: {
+    //   // //       "Content-Type": "application/json",
+    //   // //       Authorization: `Bearer kH6MHQLiPHTemMaxtqUjOEkajYkb68smkjBHAtebh6ZgZT8rFM1qATzOVVGkMu2O6DeFaOuDeAHiVosuxr7tTsEwQdcAhI8RTqzTAO8BeOgTGwKqUklSPghEprE6Zzk74Szmtpf6QF7PyjC8CVBWWjVMEYmUlytcrWqID6wyykdeW5XqW7BDSQUMHFMPseTujOSVRgXAHh`, // 🔐 secure token
+    //   // //     },
+    //   // //     body: JSON.stringify(formData),
+    //   // //   });
 
-  //     // // await fetch("https://script.google.com/macros/s/AKfycbxAEkbz5UrR8H5qNz7GeAgMMJrFwXhiVygSH5E9x64IBhXK8t77xYJ93O4MulmuovGywQ/exec", {
-  //     // //     method: "POST",
-  //     // //     headers: {
-  //     // //       "Content-Type": "application/json",
-  //     // //     },
-  //     // //     body: JSON.stringify({
-  //     // //       ...formData,
-  //     // //       token: 'kH6MHQLiPHTemMaxtqUjOEkajYkb68smkjBHAtebh6ZgZT8rFM1qATzOVVGkMu2O6DeFaOuDeAHiVosuxr7tTsEwQdcAhI8RTqzTAO8BeOgTGwKqUklSPghEprE6Zzk74Szmtpf6QF7PyjC8CVBWWjVMEYmUlytcrWqID6wyykdeW5XqW7BDSQUMHFMPseTujOSVRgXAHh', // from .env
-  //     // //     }),
-  //     // //   });
+    //   // // await fetch("https://script.google.com/macros/s/AKfycbxAEkbz5UrR8H5qNz7GeAgMMJrFwXhiVygSH5E9x64IBhXK8t77xYJ93O4MulmuovGywQ/exec", {
+    //   // //     method: "POST",
+    //   // //     headers: {
+    //   // //       "Content-Type": "application/json",
+    //   // //     },
+    //   // //     body: JSON.stringify({
+    //   // //       ...formData,
+    //   // //       token: 'kH6MHQLiPHTemMaxtqUjOEkajYkb68smkjBHAtebh6ZgZT8rFM1qATzOVVGkMu2O6DeFaOuDeAHiVosuxr7tTsEwQdcAhI8RTqzTAO8BeOgTGwKqUklSPghEprE6Zzk74Szmtpf6QF7PyjC8CVBWWjVMEYmUlytcrWqID6wyykdeW5XqW7BDSQUMHFMPseTujOSVRgXAHh', // from .env
+    //   // //     }),
+    //   // //   });
 
-  //     //   const result = await response.json();
+    //   //   const result = await response.json();
 
-  //     //   if (result.status === "success") {
-  //     //     toast.success("Form submitted successfully!");
-  //     //     setFormData({
-  //     //       name: "",
-  //     //       email: "",
-  //     //       phone: "",
-  //     //       gender: "",
-  //     //       arid: "",
-  //     //       semester: "",
-  //     //       section: "",
-  //     //       joinGroups: "",
-  //     //     }); // clear form only on success
-  //     //   } else {
-  //     //     toast.error(result.message || "Something went wrong!");
-  //     //   }
-  //     // } catch (error) {
-  //     //   toast.error("Network error! Please try again later.");
-  //     //   console.error(error);
-  //     // }
-  //     // try {
-  //     //     const response = await fetch("https://script.google.com/macros/s/AKfycbyQ0u1Clv81rQ41V-xTWVXIq9lihsIYLheaOiGIUHtnKmNFVdEJlTufhWlBfk1r9y_jdA/exec", {
-  //     //       method: "POST",
-  //     //       headers: {
-  //     //         "Content-Type": "application/json",
-  //     //       },
-  //     //       body: JSON.stringify({
-  //     //         token: "kH6MHQLiPHTemMaxtqUjOEkajYkb68smkjBHAtebh6ZgZT8rFM1qATzOVVGkMu2O6DeFaOuDeAHiVosuxr7tTsEwQdcAhI8RTqzTAO8BeOgTGwKqUklSPghEprE6Zzk74Szmtpf6QF7PyjC8CVBWWjVMEYmUlytcrWqID6wyykdeW5XqW7BDSQUMHFMPseTujOSVRgXAHh", // must match Apps Script
-  //     //         name: formData.name,
-  //     //         email: formData.email,
-  //     //         phone: formData.phone,
-  //     //         section: formData.section,
-  //     //         semester: formData.semester,
-  //     //         gender: formData.gender,
-  //     //         joinGroups: formData.joinGroups,
-  //     //         arid: formData.arid,
-  //     //       }),
-  //     //     });
+    //   //   if (result.status === "success") {
+    //   //     toast.success("Form submitted successfully!");
+    //   //     setFormData({
+    //   //       name: "",
+    //   //       email: "",
+    //   //       phone: "",
+    //   //       gender: "",
+    //   //       arid: "",
+    //   //       semester: "",
+    //   //       section: "",
+    //   //       joinGroups: "",
+    //   //     }); // clear form only on success
+    //   //   } else {
+    //   //     toast.error(result.message || "Something went wrong!");
+    //   //   }
+    //   // } catch (error) {
+    //   //   toast.error("Network error! Please try again later.");
+    //   //   console.error(error);
+    //   // }
+    //   // try {
+    //   //     const response = await fetch("https://script.google.com/macros/s/AKfycbyQ0u1Clv81rQ41V-xTWVXIq9lihsIYLheaOiGIUHtnKmNFVdEJlTufhWlBfk1r9y_jdA/exec", {
+    //   //       method: "POST",
+    //   //       headers: {
+    //   //         "Content-Type": "application/json",
+    //   //       },
+    //   //       body: JSON.stringify({
+    //   //         token: "kH6MHQLiPHTemMaxtqUjOEkajYkb68smkjBHAtebh6ZgZT8rFM1qATzOVVGkMu2O6DeFaOuDeAHiVosuxr7tTsEwQdcAhI8RTqzTAO8BeOgTGwKqUklSPghEprE6Zzk74Szmtpf6QF7PyjC8CVBWWjVMEYmUlytcrWqID6wyykdeW5XqW7BDSQUMHFMPseTujOSVRgXAHh", // must match Apps Script
+    //   //         name: formData.name,
+    //   //         email: formData.email,
+    //   //         phone: formData.phone,
+    //   //         section: formData.section,
+    //   //         semester: formData.semester,
+    //   //         gender: formData.gender,
+    //   //         joinGroups: formData.joinGroups,
+    //   //         arid: formData.arid,
+    //   //       }),
+    //   //     });
 
-  //     //     const result = await response.json();
-  //     //     console.log(result);
+    //   //     const result = await response.json();
+    //   //     console.log(result);
 
-  //     //     if (result.status === "success") {
-  //     //       alert("Form submitted!");
-  //     //     } else {
-  //     //       alert("Error: " + result.message);
-  //     //     }
-  //     //   } catch (err) {
-  //     //     console.error(err);
-  //     //     alert("Failed to submit form");
-  //     //   }
+    //   //     if (result.status === "success") {
+    //   //       alert("Form submitted!");
+    //   //     } else {
+    //   //       alert("Error: " + result.message);
+    //   //     }
+    //   //   } catch (err) {
+    //   //     console.error(err);
+    //   //     alert("Failed to submit form");
+    //   //   }
 
-  //     const proxy = "https://cors-anywhere.herokuapp.com/";
-  //     const scriptURL =
-  //       "https://script.google.com/macros/s/AKfycbyQ0u1Clv81rQ41V-xTWVXIq9lihsIYLheaOiGIUHtnKmNFVdEJlTufhWlBfk1r9y_jdA/exec";
+    //   const proxy = "https://cors-anywhere.herokuapp.com/";
+    //   const scriptURL =
+    //     "https://script.google.com/macros/s/AKfycbyE6omiqMdluUSY0XAx7PGooO_3tL_quRcDuU2ec4nqiwkZxuIgD1biniQtWFluCbCD8Q/exec";
 
-  //     fetch(proxy + scriptURL, {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify({
-  //         token: "kH6MHQLiPHTemMaxtqUjOEkajYkb68smkjBHAtebh6ZgZT8rFM1qATzOVVGkMu2O6DeFaOuDeAHiVosuxr7tTsEwQdcAhI8RTqzTAO8BeOgTGwKqUklSPghEprE6Zzk74Szmtpf6QF7PyjC8CVBWWjVMEYmUlytcrWqID6wyykdeW5XqW7BDSQUMHFMPseTujOSVRgXAHh", // 🔐 your secret key
-  //         name: formData.name,
-  //         arid: formData.arid,
-  //         section: formData.section,
-  //         phone: formData.phone,
-  //         email: formData.email,
-  //         semester: formData.semester,
-  //         gender: formData.gender,
-  //         joinGroups: formData.joinGroups,
-  //       }),
-  //     })
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         console.log("✅ Response from Google Sheets:", data);
-  //         alert("Form submitted successfully!");
-  //       })
-  //       .catch((err) => {
-  //         console.error("❌ Error:", err);
-  //         alert("Something went wrong!");
-  //       });
-  //   };
+    //   fetch(proxy + scriptURL, {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify({
+    //       token: "kH6MHQLiPHTemMaxtqUjOEkajYkb68smkjBHAtebh6ZgZT8rFM1qATzOVVGkMu2O6DeFaOuDeAHiVosuxr7tTsEwQdcAhI8RTqzTAO8BeOgTGwKqUklSPghEprE6Zzk74Szmtpf6QF7PyjC8CVBWWjVMEYmUlytcrWqID6wyykdeW5XqW7BDSQUMHFMPseTujOSVRgXAHh", // 🔐 your secret key
+    //       name: formData.name,
+    //       arid: formData.arid,
+    //       section: formData.section,
+    //       phone: formData.phone,
+    //       email: formData.email,
+    //       semester: formData.semester,
+    //       gender: formData.gender,
+    //       joinGroups: formData.joinGroups,
+    //     }),
+    //   })
+    //     .then((res) => res.json())
+    //     .then((data) => {
+    //       console.log("✅ Response from Google Sheets:", data);
+    //       alert("Form submitted successfully!");
+    //     })
+    //     .catch((err) => {
+    //       console.error("❌ Error:", err);
+    //       alert("Something went wrong!");
+    //     });
+    // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -196,7 +196,7 @@ const ClassRegistrationForm = () => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbygajc1vTmctCdwvRw7ln4Mx5qL7b5fb5BXbFAyDYYrTe2CmC74DapwDkIZ3NVVqVFfYQ/exec",
+        "https://script.google.com/macros/s/AKfycbwdP5EURXc1j_E0npqmJ_ha68rL2Dv3PrxuEyFRSvetgf2grXRwycAOUTb-OnErDNHzzg/exec",
         {
           method: "POST",
           headers: {

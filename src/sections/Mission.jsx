@@ -1,6 +1,5 @@
 import React from "react";
 import Cards from "../components/Cards";
-import JoinForm from "./JoinForm";
 
 const Mission = () => {
   const card = [
@@ -27,17 +26,26 @@ const Mission = () => {
   ];
 
   return (
-    <>
-      <div className="inner-section w-full min-h-[60vh] bg-[#1D0626] px-6 sm:px-10 lg:px-20 py-5">
-        <div className="mission space-y-5">
+    <section id="mission" className="bg-[#1D0626]">
+      <div className="inner-section w-full min-h-[60vh] px-6 sm:px-10 lg:px-20 py-12">
+        <div className="mission space-y-10">
           {/* Heading */}
-          <div className="heading text-center">
+          <div
+            className="heading text-center"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+          >
             <h4 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1FA2BF]">
               Mission
             </h4>
           </div>
+
           {/* Cards Grid */}
-          <div className="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 place-items-center">
+          <div
+            className="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
             {card.map((content, key) => (
               <Cards
                 key={key}
@@ -49,7 +57,7 @@ const Mission = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
