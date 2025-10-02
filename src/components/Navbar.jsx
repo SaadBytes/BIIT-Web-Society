@@ -31,7 +31,7 @@ const Navbar = () => {
       <nav className="w-full px-4 py-5 flex items-center justify-around bg-[#1D0626] border-b border-white relative">
         {/* Logo */}
         <div className="Logo">
-          <h1 className="text-2xl md:text-5xl font-bold text-white">
+          <h1 className="text-xl md:text-3xl font-bold text-white">
             BIIT Web Society
           </h1>
         </div>
@@ -48,27 +48,27 @@ const Navbar = () => {
               </li>
             ))} */}
             <a href="#home">
-              <li className="hover:border-b-2 border-white transition-all cursor-pointer">
+              <li className="hover:border-b-2 border-[#D95D30] hover:text-[#D95D30] transition-all cursor-pointer">
                 Home
               </li>
             </a>
             <a href="#aboutus">
-              <li className="hover:border-b-2 border-white transition-all cursor-pointer">
+              <li className="hover:border-b-2 border-[#D95D30] hover:text-[#D95D30] transition-all cursor-pointer">
                 About Us
               </li>
             </a>
             <a href="#events">
-              <li className="hover:border-b-2 border-white transition-all cursor-pointer">
+              <li className="hover:border-b-2 border-[#D95D30] hover:text-[#D95D30] transition-all cursor-pointer">
                 UpComing Events
               </li>
             </a>
             <a href="#register">
-              <li className="hover:border-b-2 border-white transition-all cursor-pointer">
+              <li className="hover:border-b-2 border-[#D95D30] hover:text-[#D95D30] transition-all cursor-pointer">
                 Registeration
               </li>
             </a>
             <a href="#footer">
-              <li className="hover:border-b-2 border-white transition-all cursor-pointer">
+              <li className="hover:border-b-2 border-[#D95D30] hover:text-[#D95D30] transition-all cursor-pointer">
                 Contact
               </li>
             </a>

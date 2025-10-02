@@ -1,6 +1,6 @@
 import React from "react";
 
-const EventsCard = ({ heading, text, date, venue }) => {
+const EventsCard = ({ heading, text, date, venue, time }) => {
   return (
     <div
       className="w-full sm:w-[20rem] md:w-[22rem] lg:w-[24rem] bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 p-6 flex flex-col items-center text-center"
@@ -13,7 +13,7 @@ const EventsCard = ({ heading, text, date, venue }) => {
       </h3>
 
       {/* Description */}
-      <p className="text-gray-600 text-sm sm:text-base mb-4">
+      <p className="text-gray-600 text-sm sm:text-base mb-4 text-justify">
         {text}
       </p>
 
@@ -25,6 +25,11 @@ const EventsCard = ({ heading, text, date, venue }) => {
       {/* Venue */}
       <p className="text-sm text-gray-500">
         📍 Venue: {venue}
+      </p>
+
+      {/* Time */}
+      <p className="text-sm text-gray-500">
+      🕓 Time: {time}
       </p>
     </div>
   );

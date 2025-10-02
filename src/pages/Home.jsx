@@ -1,28 +1,3 @@
-// import React from "react";
-// import HeroSection from "../sections/HeroSection.jsx";
-// import Navbar from "../components/Navbar.jsx";
-// import Marquee from "../components/Marquee.jsx";
-// import AboutUs from "../sections/AboutUs.jsx";
-// import Mission from "../sections/Mission.jsx";
-// import SocietyJoin from "../sections/SocietyJoin.jsx";
-// import Footer from "../sections/Footer.jsx";
-
-// const Home = () => {
-//   return (
-//     <>
-//       <Navbar />
-//       <HeroSection />
-//       <Marquee />
-//       <AboutUs />
-//       <Mission />
-//       <SocietyJoin />
-//       <Footer />
-//     </>
-//   );
-// };
-
-// export default Home;
-// src/App.jsx
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -34,14 +9,15 @@ import AboutUs from "../sections/AboutUs.jsx";
 import SocietyJoin from "../sections/SocietyJoin.jsx";
 import Footer from "../sections/Footer.jsx";
 import UpcommingEvents from "../sections/UpcommingEvents.jsx";
+import Marquee from "../components/Marquee.jsx";
 
 function App() {
   useEffect(() => {
     AOS.init({
       duration: 900,
-      once: true,         // animate only once
+      once: true, // animate only once
       easing: "ease-in-out",
-      offset: 120,        // start animation when element is 120px in view
+      offset: 120, // start animation when element is 120px in view
     });
     // Optional: refresh AOS if you modify DOM after mount
     AOS.refresh();
@@ -52,6 +28,7 @@ function App() {
       <Navbar />
       <main>
         <HeroSection />
+        <Marquee />
         <AboutUs />
         <Mission />
         <UpcommingEvents />

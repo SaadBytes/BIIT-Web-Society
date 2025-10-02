@@ -25,7 +25,7 @@ const HeroSection = () => {
         >
           <div className="headline">
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
-              Welcome to BIIT Web Society
+              Welcome to <span className="text-[#1FA2BF]">BIIT Web Society</span>
             </h2>
           </div>
           <div className="tagline flex items-center justify-center">

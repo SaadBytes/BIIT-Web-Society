@@ -4,16 +4,18 @@ import EventsCard from "../components/EventsCard.jsx";
 const UpcommingEvents = () => {
   const events = [
     {
-      heading: "HTML, CSS, JS Seminar",
-      text: "In this seminar, students will be introduced to the core fundamentals of Web Technology. Students will be able to make basic websites after this Seminar.",
-      date: "Coming soon",
-      venue: "Shared Later",
+      heading: "Orientation Seminar: The Web Society & the Future of the Web",
+      text: "The Web Society invites you to an exciting seminar where we’ll explore the world of web technologies — from the foundations of HTML, CSS, and JavaScript to the latest trends like AI in web development",
+      date: "07 October 2025",
+      venue: "Lab-04",
+      time: "4:00 PM - 5:00 PM"
     },
     {
       heading: "Workshop on PHP Laravel",
       text: "This Workshop will help students learn PHP and gain practical, hands-on experience directly from an industry expert.",
       date: "Coming soon",
       venue: "Shared Later",
+      time: "Shared Later"
     },
   ];
 
@@ -39,6 +41,7 @@ const UpcommingEvents = () => {
             text={event.text}
             date={event.date}
             venue={event.venue}
+            time={event.time}
           />
         ))}
       </div>
