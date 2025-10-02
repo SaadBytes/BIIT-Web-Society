@@ -17,7 +17,7 @@ const HeroSection = () => {
 
   return (
     <section id="home">
-      <div className="hero w-full min-h-[50vh] md:min-h-[73vh] bg-[#1D0626] flex flex-col md:flex-row items-center justify-between px-6 md:px-12">
+      <div className="hero w-full min-h-[30vh] md:min-h-[73vh] bg-[#1D0626] flex flex-col md:flex-row items-center justify-between px-6 md:px-12">
         {/* LEFT DIV */}
         <div
           className="left w-full md:w-1/2 flex flex-col items-center md:items-center justify-center gap-6 text-white text-center md:text-left py-10"

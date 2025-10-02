@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <>
-    <header></header>
+      <header></header>
       <nav className="w-full px-4 py-5 flex items-center justify-around bg-[#1D0626] border-b border-white relative">
         {/* Logo */}
         <div className="Logo">
@@ -76,7 +76,10 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden text-white text-3xl cursor-pointer" aria-label="Toggle navigation">
+        <div
+          className="md:hidden text-white text-3xl cursor-pointer"
+          aria-label="Toggle navigation"
+        >
           {isOpen ? (
             <IoClose onClick={() => setIsOpen(false)} />
           ) : (
@@ -100,7 +103,7 @@ const Navbar = () => {
                 exit="hidden"
                 className="flex flex-col items-center space-y-4 py-6 text-lg text-white"
               >
-                {menu.map((li, key) => (
+                {/* {menu.map((li, key) => (
                   <motion.li
                     key={key}
                     variants={itemVariants}
@@ -109,7 +112,32 @@ const Navbar = () => {
                   >
                     {li}
                   </motion.li>
-                ))}
+                ))} */}
+                <a href="#home">
+                  <li className="hover:border-b-2 border-[#D95D30] hover:text-[#D95D30] transition-all cursor-pointer">
+                    Home
+                  </li>
+                </a>
+                <a href="#aboutus">
+                  <li className="hover:border-b-2 border-[#D95D30] hover:text-[#D95D30] transition-all cursor-pointer">
+                    About Us
+                  </li>
+                </a>
+                <a href="#events">
+                  <li className="hover:border-b-2 border-[#D95D30] hover:text-[#D95D30] transition-all cursor-pointer">
+                    UpComing Events
+                  </li>
+                </a>
+                <a href="#register">
+                  <li className="hover:border-b-2 border-[#D95D30] hover:text-[#D95D30] transition-all cursor-pointer">
+                    Registeration
+                  </li>
+                </a>
+                <a href="#footer">
+                  <li className="hover:border-b-2 border-[#D95D30] hover:text-[#D95D30] transition-all cursor-pointer">
+                    Contact
+                  </li>
+                </a>
               </motion.ul>
             </motion.div>
           )}
